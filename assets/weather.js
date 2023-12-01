@@ -1,12 +1,12 @@
-var lat = '48.7596';
-var lon = '-113.7870';
+// weather.js
+
 var apiKey = '8cec26e69161f7f456b3daae120c0839';
 
-// Update the units to 'imperial' to get temperatures in Fahrenheit
-var currentWeatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=imperial`;
-var forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}&units=imperial`;
+function getWeatherForecast(lat, lon) {
+  // Construct the URLs with the provided latitude, longitude, and apiKey
+  var currentWeatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=imperial`;
+  var forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}&units=imperial`;
 
-function getWeatherForecast() {
   // Fetch current weather
   fetch(currentWeatherUrl)
     .then(response => response.json())
@@ -34,7 +34,7 @@ function displayCurrentWeather(weatherData) {
   var windSpeed = weatherData.wind.speed;
 
   currentWeatherElement.innerHTML = `
-    <h2>Current Weather for Glacier National Park</h2>
+    <h3>Current Weather</h3>
     <p><strong>Date:</strong> ${date}</p>
     <img src="${iconUrl}" alt="${weatherData.weather[0].description}">
     <p><strong>Temperature:</strong> ${temperature}°F</p>
@@ -45,9 +45,9 @@ function displayCurrentWeather(weatherData) {
 
 function displayWeatherForecast(weatherData) {
   var forecastElement = document.getElementById('weather-forecast');
-  forecastElement.innerHTML = '<h2>5-Day Forecast</h2>';
+  forecastElement.innerHTML = '<h3>5-Day Forecast</h3>';
 
-  weatherData.list.forEach(function(forecast, index) {
+  weatherData.list.forEach(function (forecast, index) {
     if (index % 8 === 0) {
       var date = new Date(forecast.dt * 1000).toDateString();
       var iconCode = forecast.weather[0].icon;
@@ -69,5 +69,3 @@ function displayWeatherForecast(weatherData) {
     }
   });
 }
-
-getWeatherForecast();

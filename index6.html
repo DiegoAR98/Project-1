@@ -47,9 +47,17 @@
       <!-- Links to YouTube API -->
     </div>
     
-    <div id="api-weather">
-        <!-- Links to weather API -->
-    </div>
+    <section id="api-weather-zion">
+      <h2>Weather for Zion National Park</h2>
+      <!-- Div for Current Weather -->
+      <div id="current-weather">
+        <!-- Current weather details will be dynamically inserted here -->
+      </div>
+      <!-- Div for 5-Day Weather Forecast -->
+      <div id="weather-forecast">
+        <!-- 5-day forecast details will be dynamically inserted here -->
+      </div>
+    </section>
   
   </main>
 
@@ -60,5 +68,11 @@
   </footer>
   
   <script src="./assets/park-visit.js"></script>
+  <script src="./assets/weather.js"></script>
+  <script>
+    var zionLat = '37.2982';
+    var zionLon = '-113.0263';
+    getWeatherForecast(zionLat, zionLon);
+  </script>
 </body>
 </html>

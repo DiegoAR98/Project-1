@@ -47,9 +47,17 @@
       <!-- Links to YouTube API -->
     </div>
     
-    <div id="api-weather">
-        <!-- Links to weather API -->
-    </div>
+    <section id="api-weather-yellowstone">
+      <h2>Weather for Yellowstone National Park</h2>
+      <!-- Div for Current Weather -->
+      <div id="current-weather">
+        <!-- Current weather details will be dynamically inserted here -->
+      </div>
+      <!-- Div for 5-Day Weather Forecast -->
+      <div id="weather-forecast">
+        <!-- 5-day forecast details will be dynamically inserted here -->
+      </div>
+    </section>
   
   </main>
 
@@ -60,5 +68,11 @@
   </footer>
   
   <script src="./assets/park-visit.js"></script>
+  <script src="./assets/weather.js"></script>
+  <script>
+    var yellowstoneLat = '44.4279';
+    var yellowstoneLon = '-110.5885';
+    getWeatherForecast(yellowstoneLat, yellowstoneLon);
+  </script>
 </body>
 </html>
