@@ -1,53 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Intro Page - Top 5 National Parks</title>
-<link rel="stylesheet" href="./assets/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro Page - Top 5 National Parks</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="./assets/style.css">
 </head>
 
 <body>
-  <header>
-    <div class navgation-links>
-      <a href="https://www.nps.gov/index.htm"> <img src="/assets/NPS-Transparent-Logo.png"" alt=""></a>
-    </div>
-    <h1>National Parks: A Quintet of Natural Wonders </h1>
-  
-    <nav class="navbar">
-      <!-- Dropdown Menu for National Parks -->
-      <div class="dropdown">
-        <button class="dropbtn">Parks Menu</button>
-        <div class="dropdown-content">
-          <a href="index2.html" onclick="saveLastVisitedPark('index2.html')">Glacier National Park</a>
-          <a href="index3.html" onclick="saveLastVisitedPark('index3.html')">Grand Canyon National Park</a>
-          <a href="index4.html" onclick="saveLastVisitedPark('index4.html')">Yellowstone National Park</a>
-          <a href="index5.html" onclick="saveLastVisitedPark('index5.html')">Yosemite National Park</a>
-          <a href="index6.html" onclick="saveLastVisitedPark('index6.html')">Zion National Park</a>
+    <div class="container is-flex is-justify-content-center is-align-items-center is-flex-direction-column" style="height: 100vh;">
+
+      <header class="section" style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+        <div class="navigation-links">
+            <a href="https://www.nps.gov/index.htm"> 
+                <img src="/assets/NPS-Transparent-Logo.png" alt="National Park Service Logo">
+            </a>
         </div>
-      </div>
-    </nav>
-  </header>
- 
-  <main>
-    <section id="intro-page">
-      <h2>INTRO PAGE</h2>
-      <p>
-        <!-- Introductory text go here. -->
-      </p>
-      <a href="index2.html">
-        <button id="start-button">START</button>
-    </a>
+        <h1 class="title is-1">National Parks: A Quintet of Natural Wonders</h1>
     
-    </section>
-    
-    
-  </main>
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+            <div class="dropdown is-hoverable">
+                <div class="dropdown-trigger">
+                    <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+                        <span>Parks Menu</span>
+                        <span class="icon is-small">
+                            <i class="fas fa-angle-down" aria-hidden="true"></i>
+                        </span>
+                    </button>
+                </div>
+                <div class="dropdown-menu" id="dropdown-menu" role="menu">
+                    <div class="dropdown-content">
+                        <a href="index2.html" onclick="saveLastVisitedPark('index2.html')">Glacier National Park</a>
+                        <a href="index3.html" onclick="saveLastVisitedPark('index3.html')">Grand Canyon National Park</a>
+                        <a href="index4.html" onclick="saveLastVisitedPark('index4.html')">Yellowstone National Park</a>
+                        <a href="index5.html" onclick="saveLastVisitedPark('index5.html')">Yosemite National Park</a>
+                        <a href="index6.html" onclick="saveLastVisitedPark('index6.html')">Zion National Park</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
 
-  <footer>
-    <a href="https://www.nps.gov/index.htm">National Park Service</a><!-- Footer content -->
-  </footer>
+        <main class="section">
+          <section id="intro-page" class="section" style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+              <h2 class="title is-2">INTRO PAGE</h2>
+              <p>
+                  <!-- Introductory text go here. -->
+              </p>
+              <a href="index2.html" style="margin-top: 20px;">
+                  <button class="button" id="start-button">START</button>
+              </a>
+          </section>
+      </main>
+        <footer class="section">
+            <a href="https://www.nps.gov/index.htm">National Park Service</a>
+        </footer>
 
-  <script src="./assets/park-visit.js"></script>
+    </div>
+
+    <script src="./assets/park-visit.js"></script>
 </body>
 </html>
