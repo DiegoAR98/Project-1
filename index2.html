@@ -17,17 +17,11 @@
   </header>
   
   <main>
-
     <section id="park-list">
-      <!-- Top 5 navigation list -->
-      <h3>Best of Glacier</h3>
-      <ul>
-        <li>Attraction: Going to the Sun Road, Logan Pass, St. Mary, Two Medicine</li>
-        <li>Activity: Red Bus Tours, Flathead River Rafting</li>
-        <li>Hiking: Highline Trail, Grinnell Glacier, Avalanche Trail, Hidden Lake/Overlook</li>
-      </ul>
-    </section>
-
+      <h3>Things to do</h3>
+      <!-- Activities will be added here -->
+  </section>
+   
     <!-- Main content area with the description of the park -->
     <section id="park-description">
       <!-- Description and image of the park -->
@@ -47,6 +41,8 @@
         <button id="next-button">Next</button>
       </a>
     </section>
+
+  
 
     <!-- API links -->
     <div id="api-yt">
@@ -69,6 +65,8 @@
         <!-- 5-day forecast details will be dynamically inserted here -->
       </div>
     </section>
+
+ 
   </main>
 
   <footer>
@@ -77,10 +75,12 @@
   </footer>
   <script src="./assets/weather.js"></script>
   <script src="./assets/park-visit.js"></script>
+  
   <script>
     var glacierLat = '48.7596';
     var glacierLon = '-113.7870';
     getWeatherForecast(glacierLat, glacierLon);
   </script>
+  <script src="./assets/apiglacier.js"></script>
 </body>
 </html>
