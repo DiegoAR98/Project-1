@@ -1,18 +1,13 @@
-// weather.js
-
 var apiKey = '8cec26e69161f7f456b3daae120c0839';
 
 function getWeatherForecast(lat, lon) {
-  // Construct the URLs with the provided latitude, longitude, and apiKey
   var currentWeatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=imperial`;
   var forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}&units=imperial`;
 
-  // Fetch current weather
   fetch(currentWeatherUrl)
     .then(response => response.json())
     .then(currentWeatherData => {
       displayCurrentWeather(currentWeatherData);
-      // Fetch forecast after current weather is successfully retrieved
       return fetch(forecastUrl);
     })
     .then(response => response.json())
@@ -28,7 +23,7 @@ function displayCurrentWeather(weatherData) {
   var currentWeatherElement = document.getElementById('current-weather');
   var date = new Date(weatherData.dt * 1000).toDateString();
   var iconCode = weatherData.weather[0].icon;
-  var iconUrl = `http://openweathermap.org/img/wn/${iconCode}.png`;
+  var iconUrl = `https://openweathermap.org/img/wn/${iconCode}.png`; // Updated to HTTPS
   var temperature = weatherData.main.temp;
   var humidity = weatherData.main.humidity;
   var windSpeed = weatherData.wind.speed;
@@ -51,7 +46,7 @@ function displayWeatherForecast(weatherData) {
     if (index % 8 === 0) {
       var date = new Date(forecast.dt * 1000).toDateString();
       var iconCode = forecast.weather[0].icon;
-      var iconUrl = `http://openweathermap.org/img/wn/${iconCode}.png`;
+      var iconUrl = `https://openweathermap.org/img/wn/${iconCode}.png`; // Updated to HTTPS
       var temperature = forecast.main.temp;
       var humidity = forecast.main.humidity;
       var windSpeed = forecast.wind.speed;
