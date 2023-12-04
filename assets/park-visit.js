@@ -6,14 +6,17 @@ function saveLastVisitedPark(parkFileName) {
 // Function to redirect to the last visited park
 function redirectToLastVisitedPark() {
     var lastVisitedPark = localStorage.getItem('lastVisitedPark');
-    console.log("Last visited park:", lastVisitedPark); // Debugging output
-    console.log("Current pathname:", window.location.pathname); // Debugging output
+    var basePath = '/Project-1/'; // Base path of your project
 
-    if (lastVisitedPark && window.location.pathname.endsWith('index.html')) {
-        window.location.href = lastVisitedPark;
+    console.log("Current pathname:", window.location.pathname); // Debugging output
+    console.log("Last visited park:", lastVisitedPark); // Debugging output
+    console.log("Redirecting to:", basePath + lastVisitedPark); // Debugging output
+
+    // Check if the current page is the main page of your project
+    if (lastVisitedPark && (window.location.pathname === basePath || window.location.pathname === basePath + 'index.html')) {
+        window.location.href = basePath + lastVisitedPark;
     }
 }
-
 
 // Event listener for DOMContentLoaded
 document.addEventListener('DOMContentLoaded', function () {
