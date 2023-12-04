@@ -6,11 +6,14 @@ function saveLastVisitedPark(parkFileName) {
 // Function to redirect to the last visited park
 function redirectToLastVisitedPark() {
     var lastVisitedPark = localStorage.getItem('lastVisitedPark');
-    // Check if the last visited park is set and the current page is index.html
+    console.log("Last visited park:", lastVisitedPark); // Debugging output
+    console.log("Current pathname:", window.location.pathname); // Debugging output
+
     if (lastVisitedPark && window.location.pathname.endsWith('index.html')) {
         window.location.href = lastVisitedPark;
     }
 }
+
 
 // Event listener for DOMContentLoaded
 document.addEventListener('DOMContentLoaded', function () {
