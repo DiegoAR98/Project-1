@@ -5,38 +5,46 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Intro Page - Top 5 National Parks</title>
 <link rel="stylesheet" href="./assets/style.css">
+<script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body>
-  <header>
-    <div class navgation-links>
-      <a href="https://www.nps.gov/index.htm"> <img src="/assets/NPS-Transparent-Logo.png"" alt=""></a>
+<body class="body-section">
+  <header class="py-1 flex items-center justify-around bg-green-900 text-white border-b-4 border-green-950">
+    <!-- Navigation and menu items -->
+    <div >
+      <a id="nps-logo" href="https://www.nps.gov/index.htm"> <img src="/assets/NPS-Transparent-Logo-old.png" alt="National Park Service Logo"></a>
     </div>
-    <h1>National Parks: A Quintet of Natural Wonders </h1>
-  
-    <nav class="navbar">
-      <!-- Dropdown Menu for National Parks -->
-      <div class="dropdown">
-        <button class="dropbtn">Parks Menu</button>
-        <div class="dropdown-content">
-          <a href="index2.html" onclick="saveLastVisitedPark('index2.html')">Glacier National Park</a>
-          <a href="index3.html" onclick="saveLastVisitedPark('index3.html')">Grand Canyon National Park</a>
-          <a href="index4.html" onclick="saveLastVisitedPark('index4.html')">Yellowstone National Park</a>
-          <a href="index5.html" onclick="saveLastVisitedPark('index5.html')">Yosemite National Park</a>
-          <a href="index6.html" onclick="saveLastVisitedPark('index6.html')">Zion National Park</a>
-        </div>
-      </div>
-    </nav>
+    <h1 id="quintet-header" class="text-yellow-500 text-2xl font-bold titlename">National Parks: A Quintet of Natural Wonders </h1>
+    <div class="dropdown">
+      <button class="dropbtn" id="parks-menu-btn">Parks Menu</button>
+      <ul class="dropdown-content">
+        <li>
+          <a class="hover:text-yellow-400" href="index2.html" onclick="saveLastVisitedPark('index2.html')">Glacier National Park</a>
+          </li>
+          <li>
+          <a class="hover:text-yellow-400" href="index3.html" onclick="saveLastVisitedPark('index3.html')">Grand Canyon National Park</a>
+          </li>
+          <li>
+          <a class="hover:text-yellow-400" href="index4.html" onclick="saveLastVisitedPark('index4.html')">Yellowstone National Park</a>
+          </li>
+          <li>
+          <a class="hover:text-yellow-400" href="index5.html" onclick="saveLastVisitedPark('index5.html')">Yosemite National Park</a>
+         </li>
+         <li>
+          <a class="hover:text-yellow-400" href="index6.html" onclick="saveLastVisitedPark('index6.html')">Zion National Park</a>
+         </li>
+      </ul>
+    </div>
   </header>
-  v
+  
   <main>
-    <section id="intro-page">
-      <h2>INTRO PAGE</h2>
+    <section class="" id="intro-page">
+      <h2 class="text-yellow-500  font-semibold text-center text-xl leading-loose">Advenuture Awaits</h2>
       <p>
-        <!-- Introductory text go here. -->
+        Are you an acajdncv;asnvnasv dcnsn  kj js fdj f fv s sf saef asef asef asef asef wef er fer var va vr asv as vas va sv asv as vas vas v sav as v asv asv as va v fv afrv rea vba revawev ascvae dvawvdcas dvasd vsd vas dv asdva svasdv asvae rvev arvav asdv"
       </p>
       <a href="index2.html">
-        <button id="start-button">START</button>
+        <button class= "text-yellow-500 hover:text-yellow-400 bg-zinc-800  border-2 border-zinc-600 rounded px-1" id="start-button">START</button>
     </a>
     
     </section>
@@ -44,7 +52,7 @@
     
   </main>
 
-  <footer>
+  <footer class="flex justify-center hover:text-yellow-400 text-yellow-500 bg-green-900  border-t-4 border-green-950 ">
     <a href="https://www.nps.gov/index.htm">National Park Service</a><!-- Footer content -->
   </footer>
 

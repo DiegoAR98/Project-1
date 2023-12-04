@@ -5,72 +5,89 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Top 5 National Parks</title>
 <link rel="stylesheet" href="./assets/style.css">
+<script src="https://cdn.tailwindcss.com"></script>
 </head>
-
+<!-- header of page -->
 <body>
-  <header>
+  <header class="py-1 flex items-center justify-around bg-green-900 text-white border-b-4 border-green-950">
     <!-- Navigation and menu items -->
-    <div class navgation-links>
-      <a href="https://www.nps.gov/index.htm"> <img src="/assets/NPS-Transparent-Logo.png" alt=""></a>
+    <div >
+      <a id="nps-logo" href="https://www.nps.gov/index.htm"> <img src="/assets/NPS-Transparent-Logo-old.png" alt="National Park Service Logo"></a>
     </div>
-    <h1>National Parks: A Quintet of Natural Wonders </h1>
-  </header>
-  
-  <main>
-
-    <section id="park-list">
-    <!-- Top 5 navigation list -->
-    <h3>Best of Yosemite</h3>
-    <ul>
-      Attraction: Yosemite Valley, Yosemite falls, Tenaya Lake
-      Activity: Rock climbing El Capitan, Tioga Road Drive
-      Hiking: Half Dome, Taft Point, Tuolumne Meadows, Mariposa Grove, Mist Trail
-    </ul>
-    </section>
-
-    <!-- Main content area with the description of the park -->
-    <section id="park-description">
-      <!-- Description and image of the park -->
-      <h2><a href="https://www.nps.gov/yose/index.htm">Yosemite National Park | California</a></h2>
-      <p> With skyscraping waterfalls, ancient sequoias, & unique rock formations, it's no wonder Yosemite National Park leaves its visitors awestruck with its grandeur.  Yosemite’s landscape  is a result from glacial erosion, creating its unique geology. From its hiking trails through giant sequoias and meadows, to ascending the sides of waterfalls and rock formations, the park has something for everyone.The park boasts a number of waterfalls ranging from over 600 feet to a towering almost 2,000 feet.  Not only is there hiking and sightseeing of natural geological wonders, but visitors can also rock climb, and swim in the lakes, making this a park for all seasons.  </p>
-      <a href="index4.html">
-        <button id="start-button">Previous</button>
-    </a>
-      <ul>
-        <a href="https://www.nps.gov/yose/planyourvisit/basicinfo.htm">Info</a>
-        <a href="https://www.nps.gov/yose/planyourvisit/conditions.htm">Alerts</a>
-        <a href="https://www.nps.gov/yose/planyourvisit/maps.htm">Maps</a>
-        <a href="https://www.nps.gov/yose/planyourvisit/calendar.htm">Calendar</a>
-        <a href="https://www.nps.gov/yose/planyourvisit/fees.htm">Fees</a>
+    <h1 id="quintet-header" class="text-yellow-500 text-2xl font-bold titlename">National Parks: A Quintet of Natural Wonders </h1>
+    <div class="dropdown">
+      <button class="dropbtn" id="parks-menu-btn">Parks Menu</button>
+      <ul class="dropdown-content">
+        <li>
+          <a class="hover:text-yellow-400" href="index2.html" onclick="saveLastVisitedPark('index2.html')">Glacier National Park</a>
+          </li>
+          <li>
+          <a class="hover:text-yellow-400" href="index3.html" onclick="saveLastVisitedPark('index3.html')">Grand Canyon National Park</a>
+          </li>
+          <li>
+          <a class="hover:text-yellow-400" href="index4.html" onclick="saveLastVisitedPark('index4.html')">Yellowstone National Park</a>
+          </li>
+          <li>
+          <a class="hover:text-yellow-400" href="index5.html" onclick="saveLastVisitedPark('index5.html')">Yosemite National Park</a>
+         </li>
+         <li>
+          <a class="hover:text-yellow-400" href="index6.html" onclick="saveLastVisitedPark('index6.html')">Zion National Park</a>
+         </li>
       </ul>
-      <a href="index6.html">
-        <button id="start-button">Next</button>
-    </a>
-    </section>
-
-    <!-- API links -->
-    <div id="api-yt">
-      <!-- Links to YouTube API -->
     </div>
-    
-    <section id="api-weather-yosemite">
-      <h2>Weather for Yosemite National Park</h2>
-      <!-- Div for Current Weather -->
-      <div id="current-weather">
-        <!-- Current weather details will be dynamically inserted here -->
-      </div>
-      <!-- Div for 5-Day Weather Forecast -->
-      <div id="weather-forecast">
-        <!-- 5-day forecast details will be dynamically inserted here -->
-      </div>
+  </header>
+ <!-- main body of page --> 
+  <main>
+    <main class="grid-container">
+      <section class="grid-item-weather" id="api-weather">  
+        <!-- Div for Current Weather -->
+        <div id="current-weather">
+          <h3 id="current-W">Current Weather</h3>
+          <!-- Current weather details will be dynamically inserted here -->
+        </div>
+        <!-- Div for 5-Day Weather Forecast -->
+        <div id="weather-forecast">
+          <h3 id="forecast" >5-Day Forecast</h3>
+          <!-- 5-day forecast details will be dynamically inserted here -->
+        </div>
+      </section>
+         <!-- Main content area with the description of the park -->
+    <section class="grid-item-pd" id="park-description">
+      <!-- Description and image of the park -->
+      <h2 class="text-yellow-500 hover:text-yellow-400 font-semibold text-center text-xl leading-loose"><a  href="https://www.nps.gov/yose/index.htm">Yosemite National Park | California</a></h2>
+      <p class="my-2">With skyscraping waterfalls, ancient sequoias, & unique rock formations, it's no wonder Yosemite National Park leaves its visitors awestruck with its grandeur.  Yosemite’s landscape  is a result from glacial erosion, creating its unique geology. From its hiking trails through giant sequoias and meadows, to ascending the sides of waterfalls and rock formations, the park has something for everyone.The park boasts a number of waterfalls ranging from over 600 feet to a towering almost 2,000 feet.  Not only is there hiking and sightseeing of natural geological wonders, but visitors can also rock climb, and swim in the lakes, making this a park for all seasons.</p>
+      <ul class="leading-loose text-center">
+        <a href="index4.html">
+        <button class="text-yellow-500 hover:text-yellow-400 bg-zinc-800  border-2 border-zinc-600 rounded px-1" id="prev-button">Previous</button>
+        </a>
+        <a class="info" href="https://www.nps.gov/yose/planyourvisit/basicinfo.htm">Info</a>
+        <a class="alerts" href="https://www.nps.gov/yose/planyourvisit/conditions.htm">Alerts</a>
+        <a class="maps" href="https://www.nps.gov/yose/planyourvisit/maps.htm">Maps</a>
+        <a class="calendar" href="https://www.nps.gov/yose/planyourvisit/calendar.htm">Calendar</a>
+        <a class="fees" href="https://www.nps.gov/yose/planyourvisit/fees.htm">Fees</a>
+        <a href="index6.html">
+        <button class="text-yellow-500 hover:text-yellow-400 bg-zinc-800  border-2 border-zinc-600 rounded px-1" id="nxt-button">Next</button>
+        </a>
+      </ul>
     </section>
-  
+    <section class="grid-item-pl" id="park-list">
+      <!-- Top navigation list -->
+      <h3 class="text-yellow-500 font-semibold text-center text-xl ">Best of Yosemite</h3>
+      <ul class="best-list">
+        <li class="my-1 text-center">ATTRACTIONS  : Yosemite Valley, Yosemite falls, Tenaya Lake</li>
+        <li class="my-1 text-center">ACTIVITIES   : Rock climbing El Capitan, Tioga Road Drive</li>
+        <li class="my-1 text-center">HIKING   : Half Dome, Taft Point, Tuolumne Meadows, Mariposa Grove, Mist Trail</li>
+      </ul>
+      </section>
+     <!-- API links -->
+    <div class="grid-item-yt" id="api-yt">
+      <!-- Links to YouTube API -->
+      <iframe width="360" height="201" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
   </main>
-
-  <footer>
+<!-- footer section -->
+  <footer class="flex justify-center hover:text-yellow-400 text-yellow-500 bg-green-900  border-t-4 border-green-950 ">
     <a href="index.html" class="return-main-link">Return to Main Page</a>
-
-    <a href="https://www.nps.gov/index.htm">National Park Service</a><!-- Footer content -->
   </footer>
   
   <script src="./assets/park-visit.js"></script>

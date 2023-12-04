@@ -5,75 +5,93 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Top 5 National Parks</title>
 <link rel="stylesheet" href="./assets/style.css">
+<script src="https://cdn.tailwindcss.com"></script>
 </head>
-
+<!-- header of page -->
 <body>
-  <header>
+  <header class="py-1 flex items-center justify-around bg-green-900 text-white border-b-4 border-green-950">
     <!-- Navigation and menu items -->
-    <div class navgation-links>
-      <a href="https://www.nps.gov/index.htm"> <img src="/assets/NPS-Transparent-Logo.png" alt=""></a>
+    <div >
+      <a id="nps-logo" href="https://www.nps.gov/index.htm"> <img src="/assets/NPS-Transparent-Logo-old.png" alt="National Park Service Logo"></a>
     </div>
-    <h1>National Parks: A Quintet of Natural Wonders </h1>
-  </header>
-  
-  <main>
-
-    <section id="park-list">
-    <!-- Top 5 navigation list -->
-    <h3>Best of Yellowstone</h3>
-    <ul>
-      Attraction: Grand Prismatic Spring, Norris Geyser Basin, Boiling River, Grand Canyon of Yellowstone
-      Activity : Western Cookout & Trail Ride, Snowcoach Tours
-      Wildlife: Lamar Valley, Hayden Valley
-      Hiking: Mount Washburn Trail, Uncle Tom’s Trail
-    </ul>
-    </section>
-
-    <!-- Main content area with the description of the park -->
-    <section id="park-description">
-      <!-- Description and image of the park -->
-      <h2><a href="https://www.nps.gov/yell/index.htm">Yellowstone National Park | Idaho, Montana, & Wyoming</a></h2>
-      <p>Known for its geothermal activity, vast array of wildlife, and diverse landscape, Yellowstone National Park is unlike any other. Spanning across Idaho, Wyoming, and Montana, the heart of this national park is a dormant super volcano, which when last active reshaped the region to as we see today. This supervolcano is so massive that visitors in the park can explore the caldera that is now covered with lush green vegetation and wildlife. From geothermal bubbling hot springs, active geysers blasting steaming water, waterfalls, mountains and canyons, Yellowstone is a place like none other. Not only is the landscape impressive, the wildlife boasts an impressive array including grizzlies, buffalo, elf, bighorn sheep, and bobcats to name a few. With over 2 million acres of terrain and wildlife, Yellowstone offers something new each time you visit, leaving visitors coming back to enjoy its beauty and wonder.   </p>
-      <a href="index3.html">
-        <button id="start-button">Previous</button>
-    </a>
-      <ul>
-        <a href="https://www.nps.gov/yell/planyourvisit/basicinfo.htm">Info</a>
-        <a href="https://www.nps.gov/yell/planyourvisit/conditions.htm">Alerts</a>
-        <a href="https://www.nps.gov/yell/planyourvisit/maps.htm">Maps</a>
-        <a href="https://www.nps.gov/yell/planyourvisit/calendar.htm">Calendar</a>
-        <a href="https://www.nps.gov/yell/planyourvisit/fees.htm">Fees</a>
+    <h1 id="quintet-header" class="text-yellow-500 text-2xl font-bold titlename">National Parks: A Quintet of Natural Wonders </h1>
+    <div class="dropdown">
+      <button class="dropbtn" id="parks-menu-btn">Parks Menu</button>
+      <ul class="dropdown-content">
+        <li>
+          <a class="hover:text-yellow-400" href="index2.html" onclick="saveLastVisitedPark('index2.html')">Glacier National Park</a>
+          </li>
+          <li>
+          <a class="hover:text-yellow-400" href="index3.html" onclick="saveLastVisitedPark('index3.html')">Grand Canyon National Park</a>
+          </li>
+          <li>
+          <a class="hover:text-yellow-400" href="index4.html" onclick="saveLastVisitedPark('index4.html')">Yellowstone National Park</a>
+          </li>
+          <li>
+          <a class="hover:text-yellow-400" href="index5.html" onclick="saveLastVisitedPark('index5.html')">Yosemite National Park</a>
+         </li>
+         <li>
+          <a class="hover:text-yellow-400" href="index6.html" onclick="saveLastVisitedPark('index6.html')">Zion National Park</a>
+         </li>
       </ul>
-      <a href="index5.html">
-        <button id="start-button">Next</button>
-    </a>
-    </section>
-
-    <!-- API links -->
-    <div id="api-yt">
-      <!-- Links to YouTube API -->
     </div>
-    
-    <section id="api-weather-yellowstone">
-      <h2>Weather for Yellowstone National Park</h2>
-      <!-- Div for Current Weather -->
-      <div id="current-weather">
-        <!-- Current weather details will be dynamically inserted here -->
-      </div>
-      <!-- Div for 5-Day Weather Forecast -->
-      <div id="weather-forecast">
-        <!-- 5-day forecast details will be dynamically inserted here -->
-      </div>
+  </header>
+<!-- main body of page -->
+  <main>
+    <main class="grid-container">
+      <section class="grid-item-weather" id="api-weather">  
+        <!-- Div for Current Weather -->
+        <div id="current-weather">
+          <h3 id="current-W">Current Weather</h3>
+          <!-- Current weather details will be dynamically inserted here -->
+        </div>
+        <!-- Div for 5-Day Weather Forecast -->
+        <div id="weather-forecast">
+          <h3 id="forecast" >5-Day Forecast</h3>
+          <!-- 5-day forecast details will be dynamically inserted here -->
+        </div>
+      </section>
+         <!-- Main content area with the description of the park -->
+    <section class="grid-item-pd" id="park-description">
+      <!-- Description and image of the park -->
+      <h2 class="text-yellow-500 hover:text-yellow-400 font-semibold text-center text-xl leading-loose"><a href="https://www.nps.gov/yell/index.htm">Yellowstone National Park | Idaho, Montana, & Wyoming</a></h2>
+      <p class="my-2">Known for its geothermal activity, vast array of wildlife, and diverse landscape, Yellowstone National Park is unlike any other. Spanning across Idaho, Wyoming, and Montana, the heart of this national park is a dormant super volcano, which when last active reshaped the region to as we see today. This supervolcano is so massive that visitors in the park can explore the caldera that is now covered with lush green vegetation and wildlife. From geothermal bubbling hot springs, active geysers blasting steaming water, waterfalls, mountains and canyons, Yellowstone is a place like none other. Not only is the landscape impressive, the wildlife boasts an impressive array including grizzlies, buffalo, elf, bighorn sheep, and bobcats to name a few. With over 2 million acres of terrain and wildlife, Yellowstone offers something new each time you visit, leaving visitors coming back to enjoy its beauty and wonder.</p>
+      <ul class="leading-loose text-center">
+        <a href="index3.html">
+        <button class="text-yellow-500 hover:text-yellow-400 bg-zinc-800  border-2 border-zinc-600 rounded px-1" id="prev-button">Previous</button>
+        </a>
+        <a class="info" href="https://www.nps.gov/yell/planyourvisit/basicinfo.htm">Info</a>
+        <a class="alerts" href="https://www.nps.gov/yell/planyourvisit/conditions.htm">Alerts</a>
+        <a class="maps" href="https://www.nps.gov/yell/planyourvisit/maps.htm">Maps</a>
+        <a class="calendar" href="https://www.nps.gov/yell/planyourvisit/calendar.htm">Calendar</a>
+        <a class="fees" href="https://www.nps.gov/yell/planyourvisit/fees.htm">Fees</a>
+        <a href="index5.html">
+        <button class="text-yellow-500 hover:text-yellow-400 bg-zinc-800  border-2 border-zinc-600 rounded px-1" id="nxt-button">Next</button>
+        </a>
+      </ul>
     </section>
-  
+    <section class="grid-item-pl" id="park-list">
+      <!-- Top navigation list -->
+      <h3 class="text-yellow-500 font-semibold text-center text-xl ">Best of Yellowstone</h3>
+      <ul class="best-list">
+        <li class="my-1 text-center">ATTRACTIONS  : Grand Prismatic Spring, Norris Geyser Basin, Boiling River, Grand Canyon of Yellowstone</li>
+        <li class="my-1 text-center">ACTIVITIES   : Western Cookout & Trail Ride, Snowcoach Tours</li>
+        <li class="my-1 text-center">HIKING   : Mount Washburn Trail, Uncle Tom’s Trailk</li>
+        <li class="my-1 text-center">WILDLIFE   : Lamar Valley, Hayden Valley</li>
+      </ul>
+      </section>
+    <!-- API links -->
+    <div class="grid-item-yt" id="api-yt">
+      <!-- Links to YouTube API -->
+      <iframe width="360" height="201" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div> 
+   </div>
   </main>
-
-  <footer>
+<!-- footer section -->
+  <footer class="flex justify-center hover:text-yellow-400 text-yellow-500 bg-green-900  border-t-4 border-green-950 ">
     <a href="index.html" class="return-main-link">Return to Main Page</a>
-
-    <a href="https://www.nps.gov/index.htm">National Park Service</a><!-- Footer content -->
   </footer>
-  
+  <!-- js section -->
   <script src="./assets/park-visit.js"></script>
   <script src="./assets/weather.js"></script>
   <script>

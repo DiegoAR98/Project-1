@@ -1,13 +1,98 @@
+/* Intro page's paragraph styling */
+#intro-page {
+  flex: auto ; width: 50%; height: 25% ; background-color: #000; opacity: .8; color: white; padding: 10px; border-radius: 10px; margin:20px auto;
+}
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
-    display: block;
-  }
-  /* Dropdown content (hidden by default) */
+  display: block; 
+}
+/* Dropdown content (hidden by default) */
 .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    z-index: 1;
+  display: none;
+  position: absolute;
+  background-color: #000; opacity: .8;
+  min-width: 160px;
+  padding: 10px;
+  border-radius: 5px;
+  z-index: 1;
+}
+/* dropdown styling */
+#parks-menu-btn {
+  background-color: #000; opacity: .8;
+  border-radius: 3px;
+  border-width: 3px;
+  border-color: goldenrod; 
+  padding: 3px;
+}
+/* park pages styling */
+.grid-container {
+  display: grid;
+  grid-template-columns: 15% 37.5% 37.5%;
+  grid-auto-rows: 380px 300px ; 
+  grid-gap: 40px;
+  margin: 40px;
+  justify-items: center;
+  align-items: center;
+  flex-shrink: 1;
+  flex-wrap: wrap;
+}
+/* park pages styling weather api */
+.grid-item-weather {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row: span 2;
+}
+ /* park pages styling park description */
+.grid-item-pd {
+  grid-column: 2/ -1;
+  grid-row: 1;
+}
+/* park pages park list of things to do/see */
+.grid-item-pl {
+ grid-column: 2/ 3;
+ grid-row: 2;
+}
+/* park pages styling youtube */
+.grid-item-yt {
+  grid-column: 3;
+  grid-row: 2
+}
+/* park pages styling for all grids*/
+#park-list, #park-description, .grid-item-yt, .grid-item-weather  {
+  background-color: #000; opacity: .8; color: white; border-radius: 10px; padding: 10px; justify-content: center; 
+}
+/* styling for weather api text*/
+#api-weather {
+  font-size: x-small; 
   }
-  
+/* styling for weather*/
+#current-W, #forecast {
+  color: goldenrod;
+  text-align: center;
+  padding: 3px;
+  margin-top: 5px;
+}
+/* sytling for info buttons*/
+.info, .alerts, .maps, .calendar, .fees {
+  margin: 30px;
+  margin-top: 50px;
+  background-color: rgb(1, 72, 1); opacity: .8;
+  border-radius: 3px;
+  border-width: 3px;
+  border-color: rgb(0, 44, 0); opacity: .8;
+  padding: 3px;
+  color: white; 
+}
+/* hover sytling for info buttons */
+.info:hover, .alerts:hover, .maps:hover, .calendar:hover, .fees:hover {
+  background-color: green;
+}
+
+ 
+
+
+
+
+
+
+
