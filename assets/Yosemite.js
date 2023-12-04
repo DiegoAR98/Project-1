@@ -7,7 +7,7 @@
             .then(response => response.json())
             .then(data => {
                 if (data.data && data.data.length > 0) {
-                    var thingsToDo = data.data.slice(0, 7); // Limit the array to the first 7 items
+                    var thingsToDo = data.data.slice(0, 5); // Limit to 5 items
                     var parkListElement = document.getElementById('park-list');
 
                     thingsToDo.forEach(item => {
