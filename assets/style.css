@@ -71,6 +71,7 @@
   text-align: center;
   padding: 3px;
   margin-top: 5px;
+  font-size: large;
 }
 /* sytling for info buttons*/
 .info, .alerts, .maps, .calendar, .fees {
