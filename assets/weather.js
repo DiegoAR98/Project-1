@@ -29,7 +29,7 @@ function displayCurrentWeather(weatherData) {
   var windSpeed = weatherData.wind.speed;
 
   currentWeatherElement.innerHTML = `
-    <h3>Current Weather</h3>
+    <h3 id="current-W">Current Weather</h3>
     <p><strong>Date:</strong> ${date}</p>
     <img src="${iconUrl}" alt="${weatherData.weather[0].description}">
     <p><strong>Temperature:</strong> ${temperature}°F</p>
@@ -40,7 +40,7 @@ function displayCurrentWeather(weatherData) {
 
 function displayWeatherForecast(weatherData) {
   var forecastElement = document.getElementById('weather-forecast');
-  forecastElement.innerHTML = '<h3>5-Day Forecast</h3>';
+  forecastElement.innerHTML = '<h3 id="forecast">5-Day Forecast</h3>';
 
   weatherData.list.forEach(function (forecast, index) {
     if (index % 8 === 0) {
