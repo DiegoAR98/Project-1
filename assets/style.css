@@ -1,6 +1,21 @@
 /* Intro page's paragraph styling */
 #intro-page {
-  flex: auto ; width: 50%; height: 25% ; background-color: #000; opacity: .8; color: white; padding: 10px; border-radius: 10px; margin:20px auto;
+  background-color: #000; 
+  opacity: .8; color: white; 
+  padding: 10px; border-radius: 10px;
+  justify-items: center;
+  align-items: center;
+  margin-top: 10%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+.flex-container{
+  justify-content: space-evenly;
+  
+}
+/* Show the dropdown menu on hover */
+.intro-pic {
+  background-size: 100%
 }
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
@@ -59,7 +74,12 @@
 }
 /* park pages styling for all grids*/
 #park-list, #park-description, .grid-item-yt, .grid-item-weather  {
-  background-color: #000; opacity: .8; color: white; border-radius: 10px; padding: 10px; justify-content: center; 
+  background-color: #000;
+  opacity: .8;
+  color: white;
+  border-radius: 10px;
+  padding: 10px; 
+  justify-content: center; 
 }
 /* styling for weather api text*/
 #api-weather {
@@ -89,4 +109,17 @@
   background-color: green;
 }
 
+ /* @media (max-width: 600px){
+.grid-container, .grid-item-weather, .grid-item-pd, .grid-item-pl, .grid-item-yt{
+  font-size: 1rem;
+}
+ }
+
+ @media (min-width: 601px) and (max-width: 900px){
+  .grid-container, .grid-item-weather, .grid-item-pd, .grid-item-pl, .grid-item-yt{
+    font-size: 1.3rem;
+  }
+   } */
+
+   
  
