@@ -109,17 +109,110 @@
   background-color: green;
 }
 
- /* @media (max-width: 600px){
-.grid-container, .grid-item-weather, .grid-item-pd, .grid-item-pl, .grid-item-yt{
-  font-size: 1rem;
+ /* Base styles applied for a mobile-first approach, suitable for small screens */
+.grid-container {
+  grid-template-columns: 1fr; /* Single column layout */
+  grid-auto-rows: auto; /* Auto-adjusting row height */
+  grid-gap: 20px; /* Space between grid items */
+  margin: 20px; /* Margin around the grid */
 }
- }
 
- @media (min-width: 601px) and (max-width: 900px){
-  .grid-container, .grid-item-weather, .grid-item-pd, .grid-item-pl, .grid-item-yt{
-    font-size: 1.3rem;
+.grid-item-weather,
+.grid-item-pd,
+.grid-item-pl,
+.grid-item-yt {
+  grid-column: 1; /* All items in the first column */
+  grid-row: auto; /* Automatic row placement */
+}
+
+/* Makes iframes responsive, ensures YouTube videos resize properly */
+#api-yt iframe {
+  width: 100%; /* Full width of their container */
+  height: auto; /* Height is automatic, maintaining aspect ratio */
+}
+
+/* Ensures images are responsive and do not overflow their container */
+img {
+  max-width: 100%; /* Maximum width of 100% of their container */
+  height: auto; /* Height is automatic, maintaining aspect ratio */
+}
+
+/* Sets a base font size for body text to ensure legibility on small screens */
+body {
+  font-size: 16px; /* Base font size */
+}
+
+
+/* Media query for medium screens, typically tablets */
+@media only screen and (min-width: 600px) {
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr); /* Three column layout */
+    grid-gap: 20px; /* Space between grid items */
+    margin: 20px; /* Margin around the grid */
   }
-   } */
 
-   
- 
+  /* Positioning grid items within the grid for medium screens */
+  .grid-item-weather {
+    grid-column: 1; /* First column */
+    grid-row: 1 / 3; /* Spanning two rows */
+  }
+
+  .grid-item-pd {
+    grid-column: 2 / 4; /* Spanning two columns */
+    grid-row: 1; /* First row */
+  }
+
+  .grid-item-pl {
+    grid-column: 2; /* Second column */
+    grid-row: 2; /* Second row */
+  }
+
+  .grid-item-yt {
+    grid-column: 3; /* Third column */
+    grid-row: 2; /* Second row */
+  }
+
+  /* Adjusting header and footer styles for medium screens */
+  header, footer {
+    flex-direction: row; /* Horizontal layout */
+    justify-content: space-between; /* Space between elements */
+  }
+}
+
+/* Media query for large screens, typically desktops */
+@media only screen and (min-width: 768px) {
+  /* Adjusting grid layout for large screens */
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr); /* Three column layout */
+  }
+
+  /* Adjusting header and footer layout for large screens */
+  header, footer {
+    justify-content: space-around; /* Even space around elements */
+  }
+}
+
+/* Media query for extra large screens, typically large desktops */
+@media only screen and (min-width: 992px) {
+  /* Adjusting grid layout and sizing for extra large screens */
+  .grid-container {
+    grid-template-columns: 15% 37.5% 37.5%; /* Proportionally sized columns */
+    grid-auto-rows: 380px 300px; /* Fixed height rows */
+    grid-gap: 40px; /* Larger space between grid items */
+    margin: 40px; /* Larger margin around the grid */
+  }
+
+  /* Padding adjustments for header and footer on extra large screens */
+  header, footer {
+    padding: 0 40px; /* Padding on the sides */
+  }
+}
+
+/* Media query for very large screens */
+@media only screen and (min-width: 1200px) {
+  /* Increasing base font size for very large screens for better readability */
+  body {
+    font-size: 18px; /* Larger font size */
+  }
+}
+
