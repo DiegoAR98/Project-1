@@ -4,7 +4,7 @@
 
 **National Parks: A Quintet of Natural Wonders** is a web application designed to help users discover and plan trips to the top 5 national parks in the United States. With detailed information and useful trip planning tips, this project aims to inspire and facilitate exploration of the natural beauty found within these national treasures. Whether you're a seasoned traveler or a novice adventurer, this website is your gateway to unforgettable outdoor experiences.
 
-![National Parks Website Screenshot](screenshot.png)
+![National Parks Website Screenshot](./assets/project-ss.png)
 
 ## Technical Details
 
@@ -90,3 +90,6 @@ We extend our appreciation to these resources and APIs for their contribution to
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 This README was made with :heart: by Diego Araujo.
+
+## Project Presentation
+https://docs.google.com/presentation/d/1smLjXl263Bkq714H-DAmWGaFynQIXSVwaKSh35u1leI/edit#slide=id.g29f43f0a72_0_5
