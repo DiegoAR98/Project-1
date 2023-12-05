@@ -4,62 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Intro Page - Top 5 National Parks</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="./assets/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body>
-    <div class="container is-flex is-justify-content-center is-align-items-center is-flex-direction-column" style="height: 100vh;">
+<body class="body-section">
+  <header class="py-1 flex items-center justify-around bg-green-900 text-white border-b-4 border-green-950">
+<!-- Navigation and menu items -->
+<div >
+  <a id="nps-logo" href="https://www.nps.gov/index.htm"> <img src="/assets/NPS-Transparent-Logo.png" alt="National Park Service Logo"></a>
+</div>
+<h1 id="quintet-header" class="text-yellow-500 text-2xl font-bold titlename">National Parks: A Quintet of Natural Wonders </h1>
+<div class="dropdown">
+  <button class="dropbtn" id="parks-menu-btn">Parks Menu</button>
+  <ul class="dropdown-content">
+    <li>
+      <a class="hover:text-yellow-400" href="index2.html" onclick="saveLastVisitedPark('index2.html')">Glacier National Park</a>
+      </li>
+      <li>
+      <a class="hover:text-yellow-400" href="index3.html" onclick="saveLastVisitedPark('index3.html')">Grand Canyon National Park</a>
+      </li>
+      <li>
+      <a class="hover:text-yellow-400" href="index4.html" onclick="saveLastVisitedPark('index4.html')">Yellowstone National Park</a>
+      </li>
+      <li>
+      <a class="hover:text-yellow-400" href="index5.html" onclick="saveLastVisitedPark('index5.html')">Yosemite National Park</a>
+     </li>
+     <li>
+      <a class="hover:text-yellow-400" href="index6.html" onclick="saveLastVisitedPark('index6.html')">Zion National Park</a>
+     </li>
+  </ul>
+</div>
+</header>
+<main>
+  <section class="" id="intro-page">
+    <h2 class="text-yellow-500  font-semibold text-center text-xl leading-loose">Advenuture Awaits</h2>
+    <p>"Do you love the great outdoors? The United States has a plethora of natural wonders ranging from snow capped mountains, volcanos, canyons, and wildlife one would have to see to believe. So,one might be confronted with where to start? Or which National Park is the overall best? Well look no further. We have gathered intell from stats & travelers seeling to enjoys the natural wonders just like you! For information, helpful links, and pictures to help plan your next great outdoor adventure, selecet the start button to learn about the top five National Parks in the U.S"
+    </p>
+    <a href="index2.html">
+      <button class= "text-yellow-500 hover:text-yellow-400 bg-zinc-800  border-2 border-zinc-600 rounded px-1" id="start-button">START</button>
+  </a>
+  
+  </section>
+  
+  
+</main>
 
-      <header class="section" style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
-        <div class="navigation-links">
-            <a href="https://www.nps.gov/index.htm"> 
-                <img src="./assets/NPS-Transparent-Logo.png" alt="National Park Service Logo">
-            </a>
-        </div>
-        <h1 class="title is-1">National Parks: A Quintet of Natural Wonders</h1>
-    
-        <nav class="navbar" role="navigation" aria-label="main navigation">
-            <div class="dropdown is-hoverable">
-                <div class="dropdown-trigger">
-                    <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
-                        <span>Parks Menu</span>
-                        <span class="icon is-small">
-                            <i class="fas fa-angle-down" aria-hidden="true"></i>
-                        </span>
-                    </button>
-                </div>
-                <div class="dropdown-menu" id="dropdown-menu" role="menu">
-                    <div class="dropdown-content">
-                        <a href="index2.html" onclick="saveLastVisitedPark('index2.html')">Glacier National Park</a>
-                        <a href="index3.html" onclick="saveLastVisitedPark('index3.html')">Grand Canyon National Park</a>
-                        <a href="index4.html" onclick="saveLastVisitedPark('index4.html')">Yellowstone National Park</a>
-                        <a href="index5.html" onclick="saveLastVisitedPark('index5.html')">Yosemite National Park</a>
-                        <a href="index6.html" onclick="saveLastVisitedPark('index6.html')">Zion National Park</a>
-                    </div>
-                </div>
-            </div>
-        </nav>
-    </header>
+<footer class="flex justify-center hover:text-yellow-400 text-yellow-500 bg-green-900  border-t-4 border-green-950 ">
+  <a href="https://www.nps.gov/index.htm">National Park Service</a><!-- Footer content -->
+</footer>
 
-        <main class="section">
-          <section id="intro-page" class="section" style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
-              <h2 class="title is-2">INTRO PAGE</h2>
-              <p>
-                  <!-- Introductory text go here. -->
-              </p>
-              <a href="index2.html" style="margin-top: 20px;">
-                  <button class="button" id="start-button">START</button>
-              </a>
-          </section>
-      </main>
-        <footer class="section">
-            <a href="https://www.nps.gov/index.htm">National Park Service</a>
-        </footer>
-
-    </div>
-
-    <script src="./assets/park-visit.js"></script>
+<script src="./assets/park-visit.js"></script>
 </body>
 </html>
