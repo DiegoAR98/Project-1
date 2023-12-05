@@ -9,7 +9,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="body-section">
+<body class="flex-container">
   <header class="py-1 flex items-center justify-around bg-green-900 text-white border-b-4 border-green-950">
 <!-- Navigation and menu items -->
 <div >
@@ -38,9 +38,10 @@
 </div>
 </header>
 <main>
-  <section class="" id="intro-page">
+  
+  <section class="justify-center align-center" id="intro-page">
     <h2 class="text-yellow-500  font-semibold text-center text-xl leading-loose">Adventure Awaits</h2>
-    <p class="my-2 text-center">Do you love the great outdoors? The United States has a plethora of natural wonders ranging from snow capped mountains, volcanos, canyons, and wildlife one would have to see to believe. So, one might be confronted with where to start? Or which National Park is the overall best? Well look no further. We have gathered intel from stats & travelers seeking to enjoy the natural wonders just like you! For information, helpful links, and pictures to help plan your next great outdoor adventure, select the start button to learn about the top five National Parks in the U.S."
+    <p class="my-2 text-center">Do you love the great outdoors? The United States has a plethora of natural wonders ranging from snow capped mountains, volcanos, canyons, and wildlife one would have to see to believe. So, one might be confronted with where to start? Or which National Park is the overall best? Well look no further. We have gathered intel from stats & travelers seeking to enjoy the natural wonders just like you! For information, helpful links, and pictures to help plan your next great outdoor adventure, select the start button to learn about the top five National Parks in the U.S.
     </p>
     <a href="index2.html">
       <button class= "text-yellow-500 hover:text-yellow-400 bg-zinc-800  border-2 border-zinc-600 rounded px-1" id="start-button">START</button>
@@ -51,8 +52,8 @@
   
 </main>
 
-<footer class="flex justify-center hover:text-yellow-400 text-yellow-500 bg-green-900  border-t-4 border-green-950 ">
-  <a href="https://www.nps.gov/index.htm">National Park Service</a><!-- Footer content -->
+<footer class="fixed bottom-0 right-0 left-0 flex justify-center hover:text-yellow-400 text-yellow-500 bg-green-900  border-t-4 border-green-950 ">
+  <a class="space-x-10" href="https://www.nps.gov/index.htm">National Park Service</a><!-- Footer content -->
 </footer>
 
 <script src="./assets/park-visit.js"></script>

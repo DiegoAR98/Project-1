@@ -5,74 +5,88 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Top 5 National Parks</title>
 <link rel="stylesheet" href="./assets/style.css">
-
+<script src="https://cdn.tailwindcss.com"></script>
 </head>
-
+<!-- header of page -->
 <body>
-  <header>
+  <header class="py-1 flex items-center justify-around bg-green-900 text-white border-b-4 border-green-950">
     <!-- Navigation and menu items -->
-    <div class="navigation-links">
-      <a href="https://www.nps.gov/index.htm"> <img src="./assets/NPS-Transparent-Logo.png" alt="National Park Service Logo"></a>
+    <div >
+      <a id="nps-logo" href="https://www.nps.gov/index.htm"> <img src="./assets/NPS-Transparent-Logo.png" alt="National Park Service Logo"></a>
     </div>
-    <h1>National Parks: A Quintet of Natural Wonders </h1>
-  </header>
-  
-  <main>
-
-    <main>
-      <section id="park-list">
-        <h3>Best of Grand Canyon</h3>
-        <!-- Activities will be added here -->
-    </section>
-
-    <!-- Main content area with the description of the park -->
-    <section id="park-description">
-      <!-- Description and image of the park -->
-      <h2><a href="https://www.nps.gov/grca/index.htm">Grand Canyon National Park | Arizona</a></h2>
-      <p>A truly natural wonder, located in Arizona, the Grand Canyon is a treasure not to be missed. For millions of years the Grand Canyon has expanded as the Colorado River snakes through the landscape. Make no mistake, the “Grand” Grand Canyon lives up to its reputation as visitors look over the vast winding red-orange canyon. With a length of over 270 river miles, with a width stretching up to 18 miles and depth of up to a mile, there is much to explore and see both above and down in the canyon.  The park also offers a more heavily traveled tourist part, the South Rim, as well as a less heavily populated part, the North Rim. Whether you want to hike the river beds down in the mile deep canyons, or take a helicopter ride to get a bird’s eye view, the Grand Canyon National Park will be a one of a kind grand adventure.</p>
-      <a href="index2.html">
-        <button id="start-button">Previous</button>
-    </a>
-      <ul>
-        <!-- List items for top 5 parks -->
-        <a href="https://www.nps.gov/grca/planyourvisit/basicinfo.htm">Info</a>
-        <a href="https://www.nps.gov/grca/planyourvisit/conditions.htm">Alerts</a>
-        <a href="https://www.nps.gov/grca/planyourvisit/maps.htm">Maps</a>
-        <a href="https://www.nps.gov/grca/planyourvisit/calendar.htm">Calendar</a>
-        <a href="https://www.nps.gov/grca/planyourvisit/fees.htm">Fees</a>
+    <h1 id="quintet-header" class="text-yellow-500 text-2xl font-bold titlename">National Parks: A Quintet of Natural Wonders </h1>
+    <div class="dropdown">
+      <button class="dropbtn" id="parks-menu-btn">Parks Menu</button>
+      <ul class="dropdown-content">
+        <li>
+          <a class="hover:text-yellow-400" href="index2.html" onclick="saveLastVisitedPark('index2.html')">Glacier National Park</a>
+          </li>
+          <li>
+          <a class="hover:text-yellow-400" href="index3.html" onclick="saveLastVisitedPark('index3.html')">Grand Canyon National Park</a>
+          </li>
+          <li>
+          <a class="hover:text-yellow-400" href="index4.html" onclick="saveLastVisitedPark('index4.html')">Yellowstone National Park</a>
+          </li>
+          <li>
+          <a class="hover:text-yellow-400" href="index5.html" onclick="saveLastVisitedPark('index5.html')">Yosemite National Park</a>
+         </li>
+         <li>
+          <a class="hover:text-yellow-400" href="index6.html" onclick="saveLastVisitedPark('index6.html')">Zion National Park</a>
+         </li>
       </ul>
-      <a href="index4.html">
-        <button id="start-button">Next</button>
-    </a>
-    </section>
-
-    <!-- API links -->
-    <div id="api-yt">
-      <!-- Links to YouTube API -->
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/mJNjksvmd9c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
-    
-    <section id="api-weather-grand-canyon">
-      <h2>Weather for Grand Canyon National Park</h2>
-      <!-- Div for Current Weather -->
-      <div id="current-weather">
-        <!-- Current weather details will be dynamically inserted here -->
-      </div>
-      <!-- Div for 5-Day Weather Forecast -->
-      <div id="weather-forecast">
-        <!-- 5-day forecast details will be dynamically inserted here -->
-      </div>
+  </header>
+  <!-- main body of page -->
+  <main>
+    <main class="grid-container">
+      <section class="grid-item-weather" id="api-weather">  
+        <!-- Div for Current Weather -->
+        <div id="current-weather">
+          <h3 id="current-W">Current Weather</h3>
+          <!-- Current weather details will be dynamically inserted here -->
+        </div>
+        <!-- Div for 5-Day Weather Forecast -->
+        <div id="weather-forecast">
+          <h3 id="forecast" >5-Day Forecast</h3>
+          <!-- 5-day forecast details will be dynamically inserted here -->
+        </div>
+      </section>
+         <!-- Main content area with the description of the park -->
+    <section class="grid-item-pd" id="park-description">
+      <!-- Description and image of the park -->
+      <h2 class="text-yellow-500 hover:text-yellow-400 font-semibold text-center text-xl leading-loose"><a  href="https://www.nps.gov/grca/index.htm">Grand Canyon National Park | Arizona</a></h2>
+      <p class="my-2">A truly natural wonder, located in Arizona, the Grand Canyon is a treasure not to be missed. For millions of years the Grand Canyon has expanded as the Colorado River snakes through the landscape. Make no mistake, the “Grand” Grand Canyon lives up to its reputation as visitors look over the vast winding red-orange canyon. With a length of over 270 river miles, with a width stretching up to 18 miles and depth of up to a mile, there is much to explore and see both above and down in the canyon.  The park also offers a more heavily traveled tourist part, the South Rim, as well as a less heavily populated part, the North Rim. Whether you want to hike the river beds down in the mile deep canyons, or take a helicopter ride to get a bird’s eye view, the Grand Canyon National Park will be a one of a kind grand adventure.</p>
+      <ul class="leading-loose text-center">
+        <a href="index2.html">
+        <button class="text-yellow-500 hover:text-yellow-400 bg-zinc-800  border-2 border-zinc-600 rounded px-1" id="prev-button">Previous</button>
+        </a>
+        <a class="info" href="https://www.nps.gov/grca/planyourvisit/basicinfo.htm">Info</a>
+        <a class="alerts" href="https://www.nps.gov/grca/planyourvisit/conditions.htm">Alerts</a>
+        <a class="maps" href="https://www.nps.gov/grca/planyourvisit/maps.htm">Maps</a>
+        <a class="calendar" href="https://www.nps.gov/grca/planyourvisit/calendar.htm">Calendar</a>
+        <a class="fees" href="https://www.nps.gov/grca/planyourvisit/fees.htm">Fees</a>
+        <a href="index4.html">
+        <button class="text-yellow-500 hover:text-yellow-400 bg-zinc-800  border-2 border-zinc-600 rounded px-1" id="nxt-button">Next</button>
+        </a>
+      </ul>
     </section>
-  
+    <section class="grid-item-pl" id="park-list">
+      <!-- park api list -->
+      <h3 class="text-yellow-500 font-semibold text-center text-xl">Best of Grand Canyon</h3>
+      <!-- Activities will be added here via api-->
+    </ul>
+    </section>
+     <!-- API links -->
+     <div class="grid-item-yt" id="api-yt">
+      <!-- Links to YouTube API -->
+      <iframe width="360" height="201" src="https://www.youtube.com/embed/mJNjksvmd9c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
   </main>
-
-  <footer>
+<!-- footer section -->
+  <footer class="fixed bottom-0 right-0 left-0 flex justify-center hover:text-yellow-400 text-yellow-500 bg-green-900  border-t-4 border-green-950 ">
     <a href="index.html" class="return-main-link">Return to Main Page</a>
-
-    <a href="https://www.nps.gov/index.htm">National Park Service</a><!-- Footer content -->
   </footer>
-  
-  
+  <!-- js section -->
   <script src="./assets/weather.js"></script>
   <script src="./assets/park-visit.js"></script>
   <script src="./assets/grandcanyon.js"></script>
