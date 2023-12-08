@@ -1,7 +1,8 @@
 /* Intro page's paragraph styling */
 #intro-page {
   background-color: #000; 
-  opacity: .8; color: white; 
+  opacity: .7; 
+  color: white; 
   padding: 10px; border-radius: 10px;
   justify-items: center;
   align-items: center;
@@ -9,6 +10,10 @@
   margin-left: 5%;
   margin-right: 5%;
 }
+#index-html, #index-body {
+  height: 100%;
+}
+
 .flex-container{
   justify-content: space-evenly;
   
@@ -33,11 +38,14 @@
 }
 /* dropdown styling */
 #parks-menu-btn {
-  background-color: #000; opacity: .8;
+  background-color: rgb(46, 46, 46); 
+  opacity: .8;
   border-radius: 3px;
   border-width: 3px;
-  border-color: goldenrod; 
+  border-color: rgb(108, 108, 129); 
   padding: 3px;
+  color: goldenrod;
+  font-weight: 600;
 }
 /* park pages styling */
 .grid-container {
@@ -75,7 +83,7 @@
 /* park pages styling for all grids*/
 #park-list, #park-description, .grid-item-yt, .grid-item-weather  {
   background-color: #000;
-  opacity: .8;
+  opacity: .75;
   color: white;
   border-radius: 10px;
   padding: 10px; 
@@ -103,6 +111,7 @@
   border-color: rgb(0, 44, 0); opacity: .8;
   padding: 3px;
   color: white; 
+  font-weight: 400;
 }
 /* hover sytling for info buttons */
 .info:hover, .alerts:hover, .maps:hover, .calendar:hover, .fees:hover {
@@ -214,5 +223,49 @@ body {
   body {
     font-size: 18px; /* Larger font size */
   }
+}
+
+#index-body {
+  background-image: url(https://wallpapertag.com/wallpaper/full/a/c/f/899180-cool-glacier-national-park-wallpapers-2500x1556-download.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background-position: center bottom;*/
+  position: relative; 
+  
+}
+#glacier-body {
+  background-image: url(https://moosecreekrv.com/images/Things_to_Do/d8d6155f-ed8d-4d99-84fb-9c5caa78497e.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background-position: center bottom;*/
+  position: relative; 
+}
+#grndcyn-body{
+  background-image: url(https://free4kwallpapers.com/uploads/originals/2019/02/04/colorado-river-grand-canyon-national-park-wallpaper.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background-position: center bottom;*/
+  position: relative; 
+} 
+#yllwstn-body {
+  background-image: url(https://wallpapercave.com/wp/wp2528949.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background-position: center bottom;*/
+  position: relative; 
+}
+#yosem-body {
+  background-image: url(https://hdqwalls.com/wallpapers/yosemite-national-park-2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background-position: center bottom;*/
+  position: relative; 
+}
+#zion-body {
+  background-image: url(https://www.wallpapergeeks.com/wp-content/uploads/2014/03/Zion-National-Park-Utah-Amazing-Wallpaper.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background-position: center bottom;*/
+  position: relative; 
 }
 

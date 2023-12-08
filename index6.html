@@ -8,7 +8,7 @@
 <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <!-- header of page -->
-<body>
+<body id="zion-body">
   <header class="py-1 flex items-center justify-around bg-green-900 text-white border-b-4 border-green-950">
     <!-- Navigation and menu items -->
     <div >
@@ -33,11 +33,14 @@
          <li>
           <a class="hover:text-yellow-400" href="index6.html" onclick="saveLastVisitedPark('index6.html')">Zion National Park</a>
          </li>
+        </li>
+        <a class="hover:text-yellow-400" href="index.html" onclick="saveLastVisitedPark('index.html')" >Return to Main Page</a>
+       </ul>
       </ul>
     </div>
   </header>
  <!-- main body of page --> 
-  <main>
+  <main >
     <main class="grid-container">
       <section class="grid-item-weather" id="api-weather">  
         <!-- Div for Current Weather -->
@@ -82,9 +85,9 @@
     </div>
   </main>
  <!-- footer section -->
-  <footer class="fixed bottom-0 right-0 left-0 flex justify-center hover:text-yellow-400 text-yellow-500 bg-green-900  border-t-4 border-green-950 ">
-    <a href="index.html" class="return-main-link">Return to Main Page</a>
-  </footer>
+ <footer class="fixed bottom-0 right-0 left-0 flex justify-center hover:text-yellow-400 text-yellow-500 bg-green-900  border-t-4 border-green-950 ">
+  <a class="space-x-10" href="https://www.nps.gov/index.htm">National Park Service</a><!-- Footer content -->
+</footer>
  <!-- js section -->
   <script src="./assets/weather.js"></script>
   <script src="./assets/park-visit.js"></script>

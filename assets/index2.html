@@ -8,8 +8,8 @@
 <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <!-- header of page -->
-<body id="glacier-body">
-  <header class="py-1 flex items-center justify-around bg-green-900 text-white border-b-4 border-green-950">
+<body>
+  <header class="bg-gradient-to-r from-green-900 via-green-700 to-green-700 py-1 flex items-center justify-around  text-white border-b-4 border-green-950">
     <!-- Navigation and menu items -->
     <div >
       <a id="nps-logo" href="https://www.nps.gov/index.htm"> <img src="./assets/NPS-Transparent-Logo.png" alt="National Park Service Logo"></a>
@@ -33,12 +33,12 @@
        <li>
         <a class="hover:text-yellow-400" href="index6.html" onclick="saveLastVisitedPark('index6.html')">Zion National Park</a>
        </li>
-       <a class="hover:text-yellow-400" href="index.html" onclick="saveLastVisitedPark('index.html')" >Return to Main Page</a>
+       <a class="hover:text-yellow-400" href="index.html" onclick="saveLastVisitedPark('index.html')" >Return to Main Page</a>>
       </ul>
     </div>
   </header>
     <!-- main page section begins -->
-  <main class="grid-container" >
+  <main class="grid-container" id="glacier-body">
     <section class="grid-item-weather" id="api-weather">  
       <!-- Div for Current Weather -->
       <div id="current-weather">
@@ -58,7 +58,7 @@
       <p class="my-2 text-center">With a vast array of natural beauty, Glacier National Park secures the number one slot for best U.S. National Park for 2023. Rich history and spectacular geological features are the heart of this park that spans over one million acres. Visitors can take a trip back in time when visiting the National Historic Landmark, a scenic drive through the park called “Going-to-the-Sun Road” as well as buildings created in the early 20th century by the Great Northern Railway. The park packs a punch with two mountain ranges, a vast amount of waterfalls and lakes, along with a variety of wildlife that call this park home. While Glacier National Park is open year round, the peak season is from July - August as those months boast warmer & drier weather. Activities of all experience, ability, and weather are available from skiing, boating, and hiking to tours, wheelchair accessible trails, and snowshoeing. This is definitely a park anyone should check off their list. </p>
       <ul class="leading-loose text-center">
         <a href="index.html">
-        <button class="text-yellow-500 hover:text-yellow-400 bg-zinc-800 font-medium border-2 border-zinc-600 rounded px-1" id="prev-button">Previous</button>
+        <button class="text-yellow-500 hover:text-yellow-400 bg-zinc-800  border-2 border-zinc-600 rounded px-1" id="prev-button">Previous</button>
         </a>
         <a class="info" href="https://www.nps.gov/glac/planyourvisit/basicinfo.htm">Info</a>
         <a class="alerts" href="https://www.nps.gov/glac/planyourvisit/conditions.htm">Alerts</a>
@@ -85,9 +85,15 @@
     </div>
     
   </main>
-  <footer class="fixed bottom-0 right-0 left-0 flex justify-center hover:text-yellow-400 text-yellow-500 bg-green-900  border-t-4 border-green-950 ">
-    <a class="space-x-10" href="https://www.nps.gov/index.htm">National Park Service</a><!-- Footer content -->
-  </footer>
+  <footer class="footer">
+  <div class="content text-center text-white">
+    <p>
+      <strong>Bulma</strong> by <a  href="https://jgthms.com">Jeremy Thomas</a>. The source code is licensed
+      <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
+      is licensed <a  href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+    </p>
+  </div>
+</footer>
   <!-- js section of page -->
   <script src="./assets/weather.js"></script>
   <script src="./assets/park-visit.js"></script>
